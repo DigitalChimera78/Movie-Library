@@ -6,7 +6,8 @@ namespace Movie_Library
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string path = Directory.GetCurrentDirectory() + "\\nlog.config";
+            var logger = NLog.Web.NLogBuilder.ConfigureNLog(path).GetCurrentClassLogger();
         }
     }
 }
